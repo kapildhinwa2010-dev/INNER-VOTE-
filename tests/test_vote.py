@@ -35,7 +35,7 @@ def test_shared_layer_agrees():
 
 def test_orthogonal_layer_disagrees():
     m = agreement_matrix(orthogonal_layer())
-    off = m[~np.eye(N, dtype=True)]
+    off = m[~np.eye(N, dtype=bool)]
     assert float(np.max(np.abs(off))) == pytest.approx(0.0)
 
 
@@ -51,7 +51,9 @@ def test_consensus_report_curve():
 
 
 def test_token_mean_path():
-    states = np.stack([shared_layer() for _ in range(3)])  # (N, T, D)
+    # (N paraphrases, T tokens, D) states
+    states = np.stack([shared_layer() for _ in range(3)], axis=1)
+    assert states.shape == (N, 3, D)
     m = agreement_matrix(states)
     assert m.shape == (N, N)
     assert float(np.min(m)) > 0.99
