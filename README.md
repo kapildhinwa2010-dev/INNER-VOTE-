@@ -1,5 +1,7 @@
 # INNER-VOTE
 
+[![Stars](https://img.shields.io/github/stars/kapildhinwa2010-dev/INNER-VOTE-?style=flat-square)](https://github.com/kapildhinwa2010-dev/INNER-VOTE-/stargazers) [![Forks](https://img.shields.io/github/forks/kapildhinwa2010-dev/INNER-VOTE-?style=flat-square)](https://github.com/kapildhinwa2010-dev/INNER-VOTE-/network/members) [![Issues](https://img.shields.io/github/issues/kapildhinwa2010-dev/INNER-VOTE-?style=flat-square)](https://github.com/kapildhinwa2010-dev/INNER-VOTE-/issues) [![Top language](https://img.shields.io/github/languages/top/kapildhinwa2010-dev/INNER-VOTE-?style=flat-square)](https://github.com/kapildhinwa2010-dev/INNER-VOTE-)
+
 Check whether a model agrees with itself: hidden-state consensus across paraphrases.
 
 INNER-VOTE takes the states of N paraphrases of the same question at every layer and reports the mean and minimum pairwise cosine agreement per layer, the first layer where the paraphrases disagree, and the layer with the strongest internal consensus.
